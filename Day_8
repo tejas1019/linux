@@ -1,0 +1,34 @@
+
+Roll a die find the no between 1 to 6
+
+rolldie()
+{
+   local result=$1
+   rolled=$(( ( $RANDOM % 6 ) + 1 ))
+   eval $result=$rolled
+}
+
+2.Repeat  the die roll   and find the result each time
+#!/bin/sh
+for i in 1 2 3 4 5
+do
+  echo "Looping ... number $i"
+done
+
+3.Store the result in dictionary
+
+declare -i dictionaryVarX 
+dictionaryVarX[10]=11;
+ dictionaryVarX[30]=20; 
+dictionaryVarX[2]=44; 
+echo "values - " ${dictionaryVarX[@]}
+
+4.Repeat till number has reached at 10 times
+if [file exists]; then
+   exit   
+elif
+   recheck if file exist (max 10 times)
+   if found exit else recheck again as per counter  
+fi 
+
+
