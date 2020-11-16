@@ -1,0 +1,108 @@
+Write program to
+take three inputs
+–
+a, b & c
+Compute a + b * c
+#!/bin/bash
+ read -p "Enter int1: " a
+ read -p "Enter int2: " b
+read -p "Enter int2: " c	
+
+ echo $((a+b*c))
+ d=$a+$b*c
+ echo $d
+OUTPUT
+Enter int1
+2
+Enter int2
+3
+Enter int3 
+2
+8
+
+Compute c + a / b
+#!/bin/bash
+ read -p "Enter int1: " a
+ read -p "Enter int2: " b
+read -p "Enter int2: " c
+
+ echo $((c+a/b))
+ d=$c+$a/b
+ echo $d
+
+OUTPUT
+Enter int1
+3
+Enter int2
+9
+Enter int3
+3
+
+6
+
+
+
+
+
+Sort the results to
+show the
+Computation Value in Ascending Order & Descending order
+
+
+$ cat > file1.txt
+50
+39
+15
+89
+200
+
+$ sort -n file1.txt
+Output :
+15
+39
+50
+89
+200
+
+
+$ sort -nr file1.txt
+Output :
+200
+89
+50
+39
+15
+
+
+#!/bin/bash -x
+declare -A dictionaryVar
+dictionaryVar[name]="abc";
+dictionaryVar[address]="pune";
+echo "dictionaryVar - " ${dictionaryVar[@]}
+echo "dictionaryVar keys present -"     ${!dictionaryVar[@]}
+echo "dicitonaryVar number of key-value present - " ${#dictionaryVar[@]}
+echo "dictionaryVar after deletion - " ${dictionaryVar[@]}
+declare -i dictionaryVarX
+dictionaryVarX[10]=11;
+dictionaryVarX[30]=25;
+echo "values - " ${dictionaryVarX[@]}
+
+
+
+1.	As a Simulator start
+with Flipping a Coin
+to Display Heads or
+Tails as winner - Use ((RANDOM)) to find Heads
+or dir in `ls`
+doif [ -f $dir ] 
+    then
+        line=`wc -l $dir | cut -d" " -f1`
+echo $line
+        if [ $line -gt 10 ]
+        then
+            head -2 $dir
+            tail -3 $dir
+        else
+            echo "Less 10 line"
+            cat $di
+   fi    done
