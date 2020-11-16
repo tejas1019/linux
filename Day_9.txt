@@ -1,0 +1,249 @@
+UC1.
+To check Employee Is Present Or Absent
+
+#!/bin/bash -x
+echo " Welcome to employee wage computution "
+isPresent=1;
+randomCheck=$((Random%2));
+if [[ $isPresent -eq $randomCheck ]]
+then
+echo "Employee is Present"
+else
+
+echo "Employee is Absent"
+fi
+
+ 
+Uc2.
+#!/bin/bash -x
+echo " Welcome to employee wage computution "
+isPresent=1;
+randomCheck=$((Random%2));
+if [[ $isPresent -eq $randomCheck ]]
+then
+echo "Employee is Present"
+else
+
+echo "Employee is Absent"
+fi
+
+To Calculate Daily Employee Wage
+isPresent=1;
+randomCheck =$((Random%2 ));
+if[[ $isPresent -eq $RandomCheck ]]
+then
+empRatePerHr=20;
+empHrs=8;
+salary=$(( $empHrs*$empRatePerHr))
+else
+salary=0;
+fi
+
+
+
+UC3
+randomCheck=$((Random%2));
+if[[ $isPresent –eq $randomCheck]]
+then
+empRatePerHr=20;
+empHrs=8;
+salary=$(($empHrs*$empRatePerHr))
+else
+salary=0;
+fi
+isPartTime=1;
+isFullTime=2;
+empRateper=20;
+randomcheck=$((RANDOM%3))
+if[[ $isFullTime –eq $randomCheck]]
+then
+empHrs=8;
+elif[[$isPartTime –eq $randomCheck]]
+then 
+empHrs=4;
+else
+empHrs=0;
+fi
+salary=$(($empHrs *$empRateHr))
+
+
+UC4
+isPartTime=1;
+isFullTime=2;
+randomcheck=$((RANDOM%3))
+empCheck=$((RANDOM%3))
+case $empCheck in
+$isFullTime)
+empHrs=8
+;;
+$isPartTime)
+empHrs=4
+;;
+)
+empHrs=0
+;;
+Esac
+salary=$(($empHrs*$empRateperHr));
+
+
+UC5
+isPartTime=1;
+isFullTime=2;
+empRateper=20;
+randomcheck=$((RANDOM%3))
+if [[  $isFullTime –eq $randomCheck  ]]
+then
+empHrs=8;
+elif  [[ $isPartTime –eq $randomCheck ]]
+then 
+empHrs=4;
+else
+empHrs=0;
+;;
+esac
+salary=$(($empHrs *$empRateHr));
+total salary=0;
+numberWorkingDays=20;
+
+for((  day=1;day<=$numberWorkingDays;day++  ))
+do
+empCheck=$((RANDOM%3));
+
+case $empCheck in
+$isFullTime)
+empHrs=8
+;;
+$isPartTime)
+
+empHrs=4
+;;
+)
+empHrs=0
+;;
+esac
+
+salary=$((empHrs *$empRatePerHr));
+totalSalary=0;
+numberWorkingDays=20;
+
+
+
+
+
+for((  day=1;day<=$numberWorkingDays;day++  ))
+do
+empCheck=$((RANDOM%3));
+
+case $empCheck in
+$isFullTime)
+empHrs=8
+;;
+$isPartTime)
+
+empHrs=4
+;;
+)
+empHrs=0
+;;
+esac
+salary=$(($empHrs*$empRatePerHr));
+totalSalary=(($totalSalary+$Salary));
+done
+
+
+
+
+UC_6
+
+MAX_HRS_IN_MONTH=10;
+EMP_RATE_PER_HR=20;
+NUM_WORKING_DAYS=20;
+
+totalEMPHrs=0;
+totalWorkingDays=0;
+while[[ $totalEmpHrs -1t $Max_HRS_IN_MONTH && 
+&totalWorkingDays -1t $NUM_WORKING_DAYS ]]
+Do
+((totalWOrkingDays++))
+empCheck=$((RANDOM%3));
+case $empCheck in
+$isFullTime)
+empHrs=8
+;;
+$isPartTime)
+empHrs=4;;
+)
+empHrs=0;;
+esac
+totalEmpHrs=$(TotalEmpHrs * empHrs))
+done
+totalSalary=$(($totalEmpHrs* $EMP_ATE_PER_HR))
+
+
+UC7
+
+
+getWorkHours()
+{
+Case $empCheck in
+$isPartTime
+workHours=4
+$isFULLTIME
+workHours=8;;
+
+esac
+echo $workHours;
+}
+getWorkHOurs
+
+
+
+
+
+
+UC8
+#calculate wage for each day 
+while [ $total_working_days -lt $MAX_WORKING_DAYS ] 
+do ((total_working_days++)); 
+workDone=$( getEmployeeWage $((RANDOM%3)) ); tempWage=$((workDone*EMPLOYEE_RATE_PER_HOUR)); total_working_hours=$((total_working_hours+workDone));
+ totalWage=$((totalWage+tempWage)); 
+done 
+echo "totalWage - " $totalWage
+
+
+UC9
+#!/bin/bash -x
+
+#employee either part time or full, working for any organisation & will work till
+# maximum working days allowed in month
+# maximum working hours allowed in month;
+# for that, we calculate wage.
+
+# RANDOM%N ===> range > 0 to N-1
+
+#Constant
+EMPLOYEE_PART_TIME=1
+EMPLOYEE_FULL_TIME=2
+EMPLOYEE_RATE_PER_HOUR=100
+MAX_WORKING_DAYS=5
+MAX_WORKING_HOURS=200
+
+
+#Variable
+totalWage=0             #camel case
+total_working_days=0    #underscore
+total_working_hours=0
+
+#get employee wage per day
+getEmployeeWage() {
+        #switch - generate workDone per day
+        case $1 in
+                $EMPLOYEE_PART_TIME) workDone=4;;
+                $EMPLOYEE_FULL_TIME) workDone=8;;
+                *) workDone=0;;
+        esac
+        echo $workDone;
+}
+
+
+ 
