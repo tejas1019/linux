@@ -1,0 +1,65 @@
+Write  a Programme that takecommand line arguments  n and print the harmonic no. is the form
+
+Hn=1/1+1/2+1/3………….1/n
+
+echo “Enter a Number”
+read n
+i=1
+sum=0 while[$i -1e $n]
+do
+sum=\expr $ sum+
+i=\expr  $i +1\
+done
+echo sum n series is
+i=1
+while [$i – 1e 5]
+do
+a= \’echo $sum |cut –c $i\’
+echo –e’$ a\\ c’
+if[ $i  – eq1 ]
+then
+echo –e’$ a\\ c’
+fi
+i=\expr  $i +1\
+done 
+echo
+
+
+
+
+No is Prime or Not
+
+#!/bin/bash
+#Assign the first argument from the command line to the variable
+Input_Number=$1
+Num_Factors=`factor $Input_Number|wc -w`
+echo $Num_Factors
+
+if [ $Num_Factors -eq 2 ]
+then
+echo "$Input_Number is a prime number"
+else
+echo "$Input_Number is not a prime number"
+fi
+> bash prime.sh 7
+7 is a prime number
+> bash prime.sh 10
+10 is not a prime number
+
+
+Find the Magic Number
+
+a. Ask the user to think of a number n between 1 to 100
+b. Then check with the user if the number is less then n/2 or greater
+c. Repeat till the Magic Number is reached.
+
++ read -p 'Enter a number : ' num
+Enter a number : 199
++ number=199
++ sum=0
++ '[' 199 -gt 0
++ 0 -gt 9 ']'
++ '[' 0=1 ']'
++ echo 'is a Magic Number'
+199 is a Magic Number
+
