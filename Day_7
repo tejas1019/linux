@@ -1,0 +1,113 @@
+1.write a program in the following steps
+a.Generates 10 random digit number
+b.store this random numbers into a array
+c.The  find the 2nd largest  and the  second  smallest element without soorting the array
+
+#!/bin/bash
+
+array=(7 7 6 2 1  3 4 5 6  8)
+
+if [ "${#array[@]}" -lt 2 ]	
+then
+  echo Incoming array is not large enough >&2
+  exit 1
+fi
+
+largest=${array[0]}
+secondGreatest='unset'
+
+for((i=1; i < ${#array[@]}; i++))
+do
+  if [[ ${array[i]} > $largest ]]
+  then
+    secondGreatest=$largest
+    largest=${array[i]}
+  elif (( ${array[i]} != $largest )) && { [[ "$secondGreatest" = "unset" ]] || [[ ${array[i]} > $secondGreatest ]]; }
+  then
+    secondGreatest=${array[i]}
+
+  fi
+done
+
+echo "secondGreatest = $secondGreatest
+
+
+Output
+secondGreatest
+7
+
+
+
+
+2.Extend  the prime factorization program to store  all the prime factors of a number  n into an array and finally display output
+
+echo”please enter a number”
+read num
+ret=$(factor $num |grep $ num | cut –d”;”)
+if[ “$ret” –eq “$num”  ]
+then
+echo “$ num is a prime number”
+else
+echo”$ num is not  a prime number”
+fi
+
+
+Output:
+$factor 6
+6: 2 3
+
+
+
+
+3write a programme to show sum of three integer adds to zero
+  GNU nano 4.9.3                                                                     
+#!/bin/bash
+echo "enter size(N)"
+read N
+i=1
+sum=0
+echo"Enter numbers"
+while[ $i -1e $N]
+do
+read num
+sum=$((sum + num))
+i=$((i+1))
+done
+echo $sum
+
+
+
+
+
+
+Output:
+Enter size(N)
+3
+Enter Numbers 
+1
+2
+3
+6
+
+
+
+4.find the digits repeated like twice and store them in an array
+arr[0]="XX1 11"
+arr[1]="XX2 24" 
+arr[2]="XX3 33"
+
+duplicate() { printf '%s\n' "${arr[@]}" | sort -cu |& awk -F: '{ print $5 }'; }
+
+duplicate_match=$(duplicate)
+
+echo "array: ${arr[@]}"
+
+# echo "duplicate: $duplicate_match"
+
+[[ ! $duplicate_match ]] || { echo "Found duplicate:$duplicate_match"; exit 0; }
+
+echo "no duplicate"
+
+duplicate:
+11
+33
