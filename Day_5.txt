@@ -1,0 +1,55 @@
+Leap Year. A Leap Year checks for 4 Digit Number, Divisible by 4 and not 100 unless
+divisible by 400.
+#!/bin/bash -x 
+#Rules #/4 - to be 0 (mandatory) 
+#divided by 100 -ne 0 OR divided by 400 = 0 read
+ -p "Enter year :- " userInputYear 
+#always give proper meaningful names 
+if [ $(( userInputYear%4 )) -eq 0 ] then if [[ $(( userInputYear%100 )) -ne 0 || $(( userInputYear%400 )) -eq 0 ]] 
+then echo $userInputYear " - leap year" 
+else echo $userInputYear " - not a leap year"
+ fi else echo $userInputYear " - not a leap year" 
+fi
+$Enter year:
+2020
+leap  year
+
+
+
+ADD two  random dice No. and Print the result
+#!/bin/bash
+ 
+sum=$(( $1 + $2 ))
+ 
+echo "Sum is: $sum"   
+Output:
+$ ./sum.sh 12 14       # Executing script
+
+Sum is: 26
+
+
+
+
+Write a programms that reads 5 random 2digit values then find their sum 
+
+#!/bin/bash
+echo -n "Enter number : "
+read n
+ 
+sd=0
+ 
+sum=0
+ 
+while [ $n -gt 0 ]
+do
+    sd=$(( $n % 10 ))  
+    n=$(( $n / 10 ))  
+    sum=$(( $sum + $sd )) 
+done
+echo “Sum of all digit  is: $sum"
+
+
+Enter number
+45
+Sum of all digit  is:9 
+
